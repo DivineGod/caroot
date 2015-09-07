@@ -1,6 +1,6 @@
 {
   "name": "caroot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Replaces a caret with the root path",
   "main": "index.js",
   "scripts": {
