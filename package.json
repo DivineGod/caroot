@@ -1,0 +1,35 @@
+{
+  "name": "caroot",
+  "version": "0.0.1",
+  "description": "Replaces a caret with the root path",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MauriceButler/caroot.git"
+  },
+  "author": "Maurice Butler <maurice.butler@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MauriceButler/caroot/issues"
+  },
+  "homepage": "https://github.com/MauriceButler/caroot#readme",
+  "keywords": [
+    "caret",
+    "root",
+    "require",
+    "resolve",
+    "package",
+    "json",
+    "rootify",
+    "rooty"
+  ],
+  "devDependencies": {
+    "tape": "^4.2.0"
+  },
+  "dependencies": {
+    "find-root": "^0.1.1"
+  }
+}
