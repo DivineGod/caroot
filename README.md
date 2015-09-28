@@ -4,6 +4,8 @@ Replaces a caret with the root path (closest package.json)
 
 # Usage
 
+caroot(caretedPath, currentPath[, rootSubDirectory])
+
 ```javascript
 
 var caroot = require('caroot');
@@ -13,5 +15,12 @@ var caroot = require('caroot');
 caroot('^foo', __dirname);
 
 // returns '../../foo'
+
+
+// also takes an optional root sub directory
+
+caroot('^foo', __dirname, './scripts');
+
+// returns '../foo'
 
 ```

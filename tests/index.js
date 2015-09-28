@@ -2,10 +2,9 @@ var test = require('tape'),
     caroot = require('../'),
     path = require('path');
 
-function resolve(caretedPath, currentPath){
+function resolve(caretedPath, currentPath, subDirectory){
     var directory = path.resolve(__dirname, currentPath);
-
-    return caroot(caretedPath, directory);
+    return caroot(caretedPath, directory, subDirectory);
 }
 
 test('deep to shallow', function(t) {
@@ -105,6 +104,16 @@ test('normal module', function(t) {
     t.equal(
         resolve('foo', './lvl1'),
         'foo',
+        'Resolves correctly'
+    );
+});
+
+test('root sub directory', function(t) {
+    t.plan(1);
+
+    t.equal(
+        resolve('^things/stuff', './foo/bar/things/stuff/majigger', './tests/foo/bar/'),
+        '../../things/stuff',
         'Resolves correctly'
     );
 });
